@@ -1,11 +1,12 @@
 import random
 
 
-def random_flip():
+def random_flip(): #function to generate random Heads or Tails output
+    
     random_choice = random.choice(["Heads","Tails"])
     return random_choice
 
-def user_choice():
+def user_choice(): #function to ensure a valid input from the user, and returns that input.
 
     user_input = ""
     valid_guesses = ["Heads", "Tails"]
@@ -16,13 +17,14 @@ def user_choice():
     return user_input
  
 
-def coin_flip_game():
+def coin_flip_game(): #function that plays the coin flip game.
 
-    guess_count = 1
-    guesses = []
+    guess_count = 1  #guesses set to 1 so that program considers 1st guess.
+    guesses = []     #list of guesses made by user
     winner = False
-    first_try = True
-    cancel_game = False
+    first_try = True      #Variable to determine whether first try of user or not
+    cancel_game = False   #Variable to determine whether game was cancelled
+    
     print("Lets start! Begin by choosing:")
 
     while winner == False:
